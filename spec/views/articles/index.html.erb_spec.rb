@@ -24,4 +24,9 @@ describe 'articles/index' do
       expect(article).to have_text('My jQuery Content')
     end
   end
+
+  it 'should render test template' do
+    render
+    expect(response).to render_template(:partial => '_test')
+  end
 end
