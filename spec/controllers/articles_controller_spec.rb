@@ -32,6 +32,11 @@ describe ArticlesController do
       get :index, tag: 'Ruby'
       expect(assigns(:articles)).to eq @ruby_rails_articles
     end
+
+    it 'should render test template' do
+      get :index
+      expect(response).to render_template :test
+    end
   end
 
   describe 'GET show' do
