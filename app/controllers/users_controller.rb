@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.search(params)
+    @projects = Project.all
   end
 
   def new
